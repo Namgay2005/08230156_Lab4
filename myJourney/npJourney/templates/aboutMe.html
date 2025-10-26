@@ -1,0 +1,48 @@
+{% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body style="background-color: rgb(188, 120, 177); color: white;">
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <a href="/">Learning Journey</a>
+            <a href="{% url 'about' %}">About Me</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>About Me</h1>
+        <p>Get to know me, my journey, and my interests!</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="about-section">
+            {% if my_info %}
+                <div class="card about-card">
+                    <p><strong>Name:</strong> {{ my_info.name }}</p>
+                    <p><strong>Age:</strong> {{ my_info.age }}</p>
+                    <p><strong>Bio:</strong> {{ my_info.bio }}</p>
+                    <p><strong>Hobbies:</strong> {{ my_info.hobbies }}</p>
+                </div>
+            {% else %}
+                <p>No personal info added yet. Add some in admin!</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 My Learning Journey. All rights reserved.
+    </footer>
+
+</body>
+</html>

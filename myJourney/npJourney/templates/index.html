@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Learning Journey</title>
+   
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+
+<body style="background-color: rgb(172, 115, 163); color: white;">
+
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <a href="/">Learning Journey</a>
+            <a href="{% url 'about' %}">About Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Header -->
+    <header>
+        <h1>Welcome to My Learning Journey</h1>
+        <p>Explore my progress, projects, and experiences in the world of IT and coding!</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="journey-section">
+            {% for journey in journeys %}
+                <div class="card journey-card">
+                    <h2>{{ journey.title }}</h2>
+                    <p>{{ journey.description }}</p>
+                </div>    
+            {% empty %}
+                <p>No entries yet. Add some in admin!</p>
+            {% endfor %}
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 My Learning Journey. All rights reserved.
+    </footer>
+
+</body>
+</html>

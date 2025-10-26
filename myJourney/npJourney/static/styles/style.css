@@ -1,0 +1,45 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+nav {
+    background-color: #1976d2;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+    text-align: center;
+    color: #0d47a1;
+    margin-top: 40px;
+}
+
+h2 {
+    color: #1565c0;
+    margin-left: 20px;
+}
+
+
+
